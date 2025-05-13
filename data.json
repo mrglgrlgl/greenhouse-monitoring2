@@ -1,0 +1,16 @@
+{
+    "temperature": "25.3",
+    "humidity": "55.8",
+    "soil1": "45.2",
+    "soil2": "50.1",
+    "soil3": "47.6",
+    "exhaustFanStatus": "On",
+    "coolingFanStatus": "Off",
+    "solenoidValveStatus": "Open",
+    "nitrogen": "150",
+    "phosphorus": "45",
+    "potassium": "200",
+    "ph": "6.8",
+    "deviceStatus": "Online"
+  }
+  

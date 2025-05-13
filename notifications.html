@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Greenhouse Management System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- 🌱 PROJECT TITLE -->
+
+
+  <!-- 🔀 LAYOUT WRAPPER -->
+  <div class="layout-wrapper">
+
+    <!-- 📚 SIDEBAR NAVIGATION -->
+    <nav class="side-tabs">
+      <a href="index.html" class="tab-button">Dashboard</a>
+      <a href="notifications.html" class="tab-button active">Notifications</a>
+    </nav>
+
+    <!-- 🔔 NOTIFICATIONS TAB CONTENT -->
+    <main class="tab-wrapper">
+      <section id="notifications" class="tab-content active">
+        <div class="container">
+          <h2>Camera Feed Notifications</h2>
+          <div class="monitoring-grid">
+            <div class="monitoring-section">
+              <h3>Camera 1</h3>
+              <img id="camera1" src="" alt="Camera 1 Feed" width="320" height="240" />
+            </div>
+            <div class="monitoring-section">
+              <h3>Camera 2</h3>
+              <img id="camera2" src="" alt="Camera 2 Feed" width="320" height="240" />
+            </div>
+            <div class="monitoring-section">
+              <h3>Camera 3</h3>
+              <img id="camera3" src="" alt="Camera 3 Feed" width="320" height="240" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="pages.js" defer></script>
+  <script src="scripts.js" defer></script>
+  <script type="module" src="firebaseConfig.js"></script>
+</body>
+</html>

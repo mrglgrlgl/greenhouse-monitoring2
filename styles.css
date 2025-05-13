@@ -1,0 +1,163 @@
+/* Base reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Arial, sans-serif;
+  color: #2d3748;
+  background: url('images/oyster.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Layout wrapper */
+.layout-wrapper { display: flex; min-height: 100vh; }
+
+/* Sidebar */
+.side-tabs {
+    display: flex;
+    flex-direction: column;
+    background-color: #2f855a;
+    padding: 20px 10px;
+    min-width: 200px;
+    position: sticky; /* Add this */
+    top: 0; /* Add this */
+    z-index: 10; /* Optional, if you want the sidebar to stay above other content */
+  }
+  
+  /* Tab buttons */
+  .side-tabs .tab-button {
+    display: block;
+    margin: 10px 0;
+    padding: 15px 10px;
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    text-align: left;
+    background: #38a169;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .side-tabs .tab-button.active {
+    background: #22543d;
+  }
+  
+
+/* Main content area */
+.tab-wrapper {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Vertical stacking of cards */
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 60px;
+}
+
+/* Card styling */
+.sensor-box,
+.preview-area,
+.monitoring-section {
+  background: #ffffffcc;
+  padding: 20px 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+.sensor-box:hover,
+.preview-area:hover,
+.monitoring-section:hover {
+  transform: translateY(-4px);
+}
+.sensor-box h2,
+.preview-area h2,
+.monitoring-section h2 {
+  margin-bottom: 15px;
+  font-size: 1.75rem;
+  color: #2f855a;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 8px;
+}
+
+/* Monitoring grid */
+.monitoring-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.monitoring-item {
+  background: #edf2f7;
+  padding: 15px;
+  border-radius: 10px;
+  flex: 1;
+  text-align: center;
+}
+
+/* Image grid */
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+}
+.image-grid img {
+  border-radius: 6px;
+  max-width: 120px;
+  height: auto;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 20px 0;
+  color: #2d3748;
+}
+h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #2f855a;
+}
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #4a5568;
+  text-align: center;
+}
+
+/* Buttons */
+button {
+  padding: 10px 15px;
+  background: #38a169;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  background: #2f855a;
+}
+.clear-btn {
+  background: #e53e3e;
+  margin-top: 10px;
+}
+.clear-btn:hover {
+  background: #c53030;
+}

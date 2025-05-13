@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greenhouse Management System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- 🌱 PROJECT TITLE -->
+  <!-- <h1>Greenhouse Management System</h1> -->
+
+  <!-- 🔀 LAYOUT WRAPPER -->
+  <div class="layout-wrapper">
+
+    <!-- 📚 SIDEBAR NAVIGATION -->
+    <nav class="side-tabs">
+      <a href="index.html" class="tab-button active">Dashboard</a>
+      <a href="notifications.html" class="tab-button">Notifications</a>
+    </nav>
+
+    <!-- 📊 DASHBOARD CONTENT -->
+    <main class="tab-wrapper">
+      <section id="dashboard" class="tab-content active">
+        <div class="container main-layout">
+
+          <!-- Temperature Section -->
+          <div class="sensor-box">
+            <h2>Temperature</h2>
+            <p>Temperature: <span id="temperature">Loading...</span></p>
+          </div>
+
+          <!-- Humidity Section -->
+          <div class="sensor-box">
+            <h2>Humidity</h2>
+            <p>Humidity: <span id="humidity">Loading...</span></p>
+          </div>
+
+          <!-- Soil Moisture Section -->
+          <div class="sensor-box">
+            <h2>Soil Moisture Sensors</h2>
+            <p>Soil 1: <span id="soil1">Loading...</span></p>
+            <p>Soil 2: <span id="soil2">Loading...</span></p>
+            <p>Soil 3: <span id="soil3">Loading...</span></p>
+            <p>Soil Avg: <span id="soilAvg">Loading...</span></p>
+          </div>
+
+          <!-- System Status Section -->
+          <div class="sensor-box">
+            <h2>System Status</h2>
+            <p>Exhaust Fan: <span id="exhaustFanStatus">Loading...</span></p>
+            <p>Cooling Fan: <span id="coolingFanStatus">Loading...</span></p>
+            <p>Solenoid Valve: <span id="solenoidValveStatus">Loading...</span></p>
+          </div>
+
+          <!-- NPK & pH Section -->
+          <div class="sensor-box">
+            <h2>NPK & pH Values</h2>
+            <p>N (Nitrogen): <span id="nValue">Loading...</span></p>
+            <p>P (Phosphorus): <span id="pValue">Loading...</span></p>
+            <p>K (Potassium): <span id="kValue">Loading...</span></p>
+            <p>pH Level: <span id="phValue">Loading...</span></p>
+          </div>
+
+          <!-- Device Monitoring Section -->
+          <div class="sensor-box monitoring-section">
+            <h2>Device Monitoring</h2>
+            <div class="monitoring-grid">
+              <div class="monitoring-item">
+                <h3>Device Status</h3>
+                <p id="deviceStatus">Loading...</p>
+              </div>
+              <div class="monitoring-item">
+                <h3>Last Upload</h3>
+                <p id="lastUploadTime">Loading...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Upload & Preview Section -->
+          <div class="sensor-box right-panel">
+            <h2>Upload Photos</h2>
+            <form id="uploadForm" onsubmit="uploadPhotos(event)">
+              <input type="file" id="fileInput" accept="image/*" multiple>
+              <button type="submit">Upload Photos</button>
+            </form>
+            <div class="preview-area">
+              <h2>Uploaded Photos</h2>
+              <div id="previewContainer" class="image-grid"></div>
+              <button class="clear-btn" id="clearManualPhotos" onclick="clearManualPhotos()">Clear Photos</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="pages.js" defer></script>
+  <script src="scripts.js" defer></script>
+</body>
+</html>
