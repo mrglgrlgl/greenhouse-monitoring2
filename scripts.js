@@ -20,13 +20,31 @@ const elements = {
   lastUploadTime: document.getElementById('lastUploadTime')
 };
 
-// Fetch and apply data from data.json
+// Fetch and apply data from data.json 
+// function fetchSensorData() {
+//   fetch('data.json')
+//     .then(res => res.json())
+//     .then(updateUI)
+//     .catch(err => console.error('Failed to load data.json:', err));
+// }
+
+
+//replace function above
+
+const ESP32_IP = '192.168.1.42';        // <- set to your ESP32’s IP
+const SENSOR_ENDPOINT = `http://${ESP32_IP}/sensor`;
+
 function fetchSensorData() {
-  fetch('data.json')
-    .then(res => res.json())
-    .then(updateUI)
-    .catch(err => console.error('Failed to load data.json:', err));
+  fetch(SENSOR_ENDPOINT)
+    .then(res => {
+      if (!res.ok) throw new Error(res.status);
+      return res.json();
+    })
+    .then(data => updateUI(data))
+    .catch(err => console.error('ESP32 fetch error:', err));
 }
+
+
 
 // Update the UI
 function updateUI(data) {

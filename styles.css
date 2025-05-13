@@ -161,3 +161,16 @@ button:hover {
 .clear-btn:hover {
   background: #c53030;
 }
+/* Outer card that wraps all sensor cards */
+.outer-card {
+    background: #f7fafcdd;
+    border-radius: 16px;
+    padding: 30px 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
